@@ -1,4 +1,4 @@
-# Sistema di Login e Registrazione in PHP con JSON e Bootstrap
+# Sistema di Login e Registrazione in PHP con JSON e Bootstrap. Utilizzo del solo method GET
 
 Questo progetto implementa un semplice sistema di autenticazione utente utilizzando PHP, Bootstrap per lo stile e un file `utenti.json` come archivio locale dei dati.
 
