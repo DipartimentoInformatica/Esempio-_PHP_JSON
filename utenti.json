@@ -47,5 +47,19 @@
         "nome": "ugo",
         "cognome": "vittorio",
         "email": "ugo@vittorio.com"
+    },
+    {
+        "login": "paolo",
+        "password": "222222",
+        "nome": "22",
+        "cognome": "222",
+        "email": "222@2222.com"
+    },
+    {
+        "login": "paolo",
+        "password": "1",
+        "nome": "1",
+        "cognome": "1",
+        "email": "1@1.com"
     }
 ]
