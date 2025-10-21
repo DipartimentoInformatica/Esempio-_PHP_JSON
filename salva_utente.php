@@ -56,7 +56,7 @@ if ($loginEsistente) {
           <div class="card-body text-center">
             <h4 class="text-danger mb-3">Username già registrato</h4>
             <p>Il nome utente <strong>{$login}</strong> è già in uso. Scegli un login diverso.</p>
-            <a href="registrazione.php" class="btn btn-outline-primary mt-3">Torna alla registrazione</a>
+            <a href="registrazione.html" class="btn btn-outline-primary mt-3">Torna alla registrazione</a>
           </div>
         </div>
       </div>
