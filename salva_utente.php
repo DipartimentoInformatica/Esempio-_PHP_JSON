@@ -8,6 +8,8 @@ $nome = $_POST['nome'] ?? '';
 $cognome = $_POST['cognome'] ?? '';
 $email = $_POST['email'] ?? '';
 
+
+
 // Crea un nuovo utente
 $nuovoUtente = [
   'login' => $login,
@@ -25,6 +27,45 @@ if (file_exists($filename)) {
   if (!is_array($utenti)) {
     $utenti = [];
   }
+}
+
+// Verifica se esiste già un utente con lo stesso login
+$loginEsistente = false;
+foreach ($utenti as $utente) {
+  if ($utente['login'] === $login) {
+    $loginEsistente = true;
+    break;
+  }
+}
+
+if ($loginEsistente) {
+  // Mostra messaggio di errore
+  echo <<<HTML
+  <!DOCTYPE html>
+  <html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>Errore registrazione</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+  <div class="container vh-100 d-flex flex-column justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h4 class="text-danger mb-3">Username già registrato</h4>
+            <p>Il nome utente <strong>{$login}</strong> è già in uso. Scegli un login diverso.</p>
+            <a href="registrazione.php" class="btn btn-outline-primary mt-3">Torna alla registrazione</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
+  HTML;
+  exit;
 }
 
 // Aggiungi il nuovo utente
